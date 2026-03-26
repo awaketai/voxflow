@@ -48,3 +48,4 @@ src-tauri/Cargo.lock.bak
 *.so
 *.dylib
 *.app
+.claude/settings.local.json
