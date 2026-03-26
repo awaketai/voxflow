@@ -42,7 +42,7 @@ vox-flow(voice flow)
 
 ## 根据探索文档构建设计文档
 
-@specs/0001-spec.md 这是vox-flow(voice flow)语音实时转文本的项目探索文档，仔细阅读文档内容，如果有模糊的地方，进行系统 web search 以确保信息的准确性，尤其是使用最新版本的 dependencies。根据你了解的知识，构建一个详细的设计文档，放在 ./specs/0002-design.md 文件中，输出为中文，使用 mermaid chart 绘制架构、设计、组件、流程等图表并详细说明。
+@specs/0001-spec.md 这是vox-flow(voice flow)基于 Rust 的语音实时转文本的项目探索文档，仔细阅读文档内容，如果有模糊的地方，进行系统 web search 以确保信息的准确性，尤其是使用最新版本的 dependencies。根据你了解的知识，构建一个详细的设计文档，放在 ./specs/0002-design.md 文件中，输出为中文，使用 mermaid chart 绘制架构、设计、组件、流程等图表并详细说明。
 
 ## 根据设计文档生成实现计划
 
