@@ -48,6 +48,8 @@ vox-flow(voice flow)
 
 根据设计文档 @specs/0002-design.md 生成 implementation plan，文档保存在 ./specs/0003-implementation-plan.md 中
 
+## 按照设计文档，完成每个 Phase 
+
 ## 一些问题
 
 1.mac设备输入的频率是 48k 赫兹，而elevenlabs要求是16k赫兹的数据

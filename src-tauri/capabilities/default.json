@@ -1,13 +1,26 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "Capability for the main window",
-  "windows": [
-    "main"
-  ],
+  "description": "VoxFlow core permissions",
+  "windows": ["main"],
   "permissions": [
     "core:default",
     "opener:default",
-    "log:default"
+    "log:default",
+    "window-state:default",
+    "global-shortcut:allow-register",
+    "global-shortcut:allow-unregister",
+    "global-shortcut:allow-is-registered",
+    "global-shortcut:allow-unregister-all",
+    "clipboard-manager:allow-read-text",
+    "clipboard-manager:allow-write-text",
+    "notification:allow-is-permission-granted",
+    "notification:allow-request-permission",
+    "notification:allow-notify",
+    "store:default",
+    "macos-permissions:allow-check-accessibility-permission",
+    "macos-permissions:allow-request-accessibility-permission",
+    "macos-permissions:allow-check-microphone-permission",
+    "macos-permissions:allow-request-microphone-permission"
   ]
 }

@@ -268,24 +268,24 @@ sequenceDiagram
     participant TS as TypeScript 前端
     participant CMD as Tauri Command
     participant PROC as Tokio Processing Task
-    participant RB as RingBuffer (HeapRb<i16>)
+    participant RB as RingBuffer HeapRb-i16
     participant CB as cpal Audio Callback
     participant MIC as 麦克风硬件
 
-    TS->>CMD: invoke("start_audio_capture")
-    CMD->>CB: 构建 cpal StreamConfig<br/>16kHz / 1ch / Fixed(1024)
-    CMD->>PROC: 启动 Tokio 定时任务 (100ms 间隔)
-    CMD-->>TS: Ok(())
+    TS ->> CMD: invoke start_audio_capture
+    CMD ->> CB: 构建 cpal StreamConfig 16kHz/1ch/Fixed-1024
+    CMD ->> PROC: 启动 Tokio 定时任务 100ms 间隔
+    CMD ->> TS: Ok(())
 
     loop 每 64ms (1024 frames @ 16kHz)
-        MIC->>CB: on_audio_data(&[i16; 1024])
-        CB->>RB: producer.push_slice(&data)
+        MIC ->> CB: on_audio_data(buf i16 x1024)
+        CB ->> RB: producer.push_slice(data)
     end
 
     loop 每 100ms
-        PROC->>RB: consumer.pop_slice(&mut buf)
-        PROC->>PROC: base64::encode(&pcm_bytes)
-        PROC->>TS: channel.send(AudioChunk { base64 })
+        PROC ->> RB: consumer.pop_slice(buf)
+        PROC ->> PROC: base64::encode(pcm_bytes)
+        PROC ->> TS: channel.send(AudioChunk base64)
     end
 ```
 

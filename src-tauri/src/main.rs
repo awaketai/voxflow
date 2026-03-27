@@ -4,6 +4,6 @@
 use anyhow::Result;
 
 fn main() -> Result<()> {
-    example_lib::run()?;
+    vox_flow_lib::run()?;
     Ok(())
 }
